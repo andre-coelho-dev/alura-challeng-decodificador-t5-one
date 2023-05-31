@@ -43,7 +43,7 @@ main {
   }
 
   .mensagem:placeholder-shown {
-    background-image: url("https://andre-coelho-dev.github.io/challeng-one-t5/img/moca-azul.png");
+    background-image: url(/img/moca-azul.png);
     transition: 0.5s;
   }
 
