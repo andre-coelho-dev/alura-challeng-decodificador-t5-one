@@ -16,17 +16,15 @@
 
   <body>
     
-    <header>
-      <img src="img/logo-alura.png" alt="logo alura">
+    <header class="logoAlura">
+      <img src='img/logo-alura.png'" alt="logo alura">
     </header>
 
     <main>
       <section><!-- Inicio primeira section-->
         <textarea class="digiteSeuTexto" cols="41" rows="4" placeholder="Digite seu texto aqui" style="resize: none;"></textarea>
       
-        <div class="aviso">
-          <h6>&excl; Apenas letras minúsculas</h6>
-        </div>
+        <div class="aviso"><p>&excl; Apenas letras minúsculas</p></div>
 
         <div class="botoes01">
             <button class="btnEncriptar" onclick="btnEncriptar()">Criptografar</button>
@@ -35,14 +33,11 @@
       </section><!-- Fim primeira section-->
   
       <section><!-- Inicio segunda section-->
-          
-        <textarea class="mensagem" cols="14" rows="11" placeholder="" style="resize: none;">
-        
-        </textarea>
-          <button class="btnCopiar" onclick="btnCopiar()">Copiar</button>
+        <button class="btnCopiar" onclick="btnCopiar()">Copiar</button>
+        <textarea disabled id="myTextArea" rows="12" cols="20" oninput="toggleBackground()"></textarea
       </section><!-- Inicio segunda section-->  
     </main>
-    <script src="script.js"></script>
+    <script src='script.js'></script>
 
     <footer>&copy; André Coelho - 2023 - Challeng Alura+ Oracle - T5</footer>
   </body>

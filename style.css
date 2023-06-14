@@ -9,7 +9,7 @@
 .logoAlura {
   margin-left: 10px;
   padding-top: 10px;
-  width: 2%;
+  width: 50%;
 }
 
 main {
@@ -20,59 +20,105 @@ main {
 
 .digiteSeuTexto {
   border: none;
-  color: #6A49D9;
-  margin-top: 90px;
+  color: #3a0ca3;
+  margin-top: 5px;
   text-transform: lowercase;
 }
 
-::placeholder {color:#6A49D9;}
+::placeholder {color:#3a0ca3;}
   .digiteSeuTexto:focus {
     outline: none;
   }
 
-  .mensagem {
+  #myTextArea {
     background: white;
     background-repeat: no-repeat;
     border: none;
-    border-radius: 24px;
-    color: #6A49D9;
-    margin-left: 98px;
-    margin-top: 20px;
+    border-radius: 26px;
+    color: #3a0ca3;
+    margin-left: 100px;
+    margin-top: 10px;
     padding-left: 20px;
-    position: fixed;
+    position: sticky;
+    height: 445px;
+    width: 330px;
+    resize: none;
   }
 
-  .mensagem:placeholder-shown {
+  #myTextArea {
     background-image: url(img/moca-azul.png);
-    transition: 0.5s;
+  }
+
+  .bg-removed {
+    background: none;
   }
 
   .imagemFundo {
     display: flex;
   }
 
-  .mensagem:focus {
+  #myTextArea:focus {
     outline: none;
   }
 
-  .botoes {
+  .botoes01 {
     display: flex;
-    margin-top: 18px;
+    margin-top: 10px;
   }
 
   .btnDescriptar {
-    background: #D8DFE8;
-    border: 1px solid #6A49D9;
+    background: #3a0ca3;
+    border: 1px solid #3a0ca3;
     border-radius: 24px;
-    color: #6A49D9;
+    color: #F3F5FC;
     cursor: pointer;
     height: 67px;
     margin-left: 30px;
     width: 328px;
   }
+  
+  .btnEncriptar {
+    background: #3a0ca3;
+    border: 1px solid #3a0ca3;
+    border-radius: 24px;
+    color: #F3F5FC;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+  }
 
-  button {
-    --color: #560bad;
+  .btnCopiar {
+    background: #3a0ca3;
+    border: 1px solid #3a0ca3;
+    border-radius: 24px;
+    color: #F3F5FC;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 380px;
+    position: absolute;
+    width: 328px;
+  }
+
+  .aviso > p {
+    color: #3a0ca3;
+    font-size: 15px;
+    margin-top: 108px;
+    margin-left: 30px;
+  }
+
+  footer {
+    height: 10px;
+    color: #6A49D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/* Inicio - Animação botões (Descriptografar e Copiar) */
+button {
+    --color: #F3F5FC;
     display: inline-block;
     width: 8em;
     height: 2.6em;
@@ -85,7 +131,6 @@ main {
     z-index: 10;
     font-size: 20px;
     border-radius: 6px;
-    font-weight: 500;
     color: var(--color);
    }
    
@@ -100,7 +145,7 @@ main {
    }
    
    button:hover {
-    color: #fff;
+    color: #3a0ca3;
    }
    
    button:before {
@@ -115,44 +160,73 @@ main {
    }
    
    button:active:before {
-    background: #3a0ca3;
+    background: #F3F5FC;
     transition: background 0s;
    }
-
-  .btnEncriptar {
-    background: #6A49D9;
-    border: 1px solid #6A49D9;
-    border-radius: 24px;
-    color: white;
-    cursor: pointer;
-    height: 67px;
-    width: 328px;
+   
+   /* @media screen and (max-width:1000px){
+  .container {
+      flex-direction:column; 
+      width:90%; 
+      height: 100%;
+  }
+  .entrada-mensagem {
+      margin:20px 0;
+      width:100%;
+  }
+  .entrada{
+      height: 20vh;
+  }
+  .tela-inicial img {
+      display:none;
+  }
+  .tela-final {
+      width: 100%;
+  }
+  .saida-mensagem {
+      width:100%;
+      margin-left:0;
+      display:block;
+  }
+  .saida{
+      height: 25vh;
   }
 
-  .btnCopiar {
-    border: 1px solid #6A49D9;
-    border-radius: 24px;
-    color: #6A49D9;
-    cursor: pointer;
-    height: 67px;
-    margin-left: 108px;
-    margin-top: 470px;
-    position: absolute;
-    width: 336px;
-  }
-
-  .aviso > h6 {
-    color: #6A49D9;
-    font-size: 20px;
-    margin-top: 108px;
-    margin-left: 95px;
-  }
-
-  footer {
-    height: 80px;
-    color: #6A49D9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
 }
+
+@media screen and (max-width:480px){
+  .container {
+      flex-direction:column; 
+      width:90%;
+      height: 100%;
+      margin-left: 5%;
+  }
+  .entrada-mensagem {
+      margin:20px 0;
+      width:100%;
+  }
+  .entrada{
+      height: 20vh;
+  }
+  .tela-inicial img {
+      display:none;
+  }
+  .tela-final {
+      width: 100%;
+  }
+  .saida-mensagem {
+      width:90%;
+      margin-left:0;
+      display:block;
+  }
+  .saida{
+      height: 25vh;
+  }
+  .decodificadores{
+      display:block;
+  }
+  #button-cripto{
+      margin-bottom: 14px;
+  }
+ 
+} */
